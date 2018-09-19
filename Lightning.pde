@@ -1,7 +1,8 @@
-int startX = 0
-int startY = 150
-int endX = 0
-int endY = 150
+int startX = 500;
+int startY = 0;
+int endX = 500;
+int endY = 0;
+//int randomColor = (int)(Math.random()*255);
 void setup()
 {
   size(1000,1000);
@@ -10,21 +11,22 @@ void setup()
 }
 void draw()
 {
-	stroke(Math.random());
-	while(endX<1000)
+	//stroke(185,76,225);
+	while(endY<1000)
 	{
-		endX=startX + (int)(Math.random()*10);
+		stroke((int)(Math.random*255),(int)(Math.random*255),(int)(Math.random*255));
+		endX=startX + (int)(Math.random()*19)-9;
 		endY=startY + (int)(Math.random()*10);
-		line(startX,endX,startY,endY);
+		line(startX,startY,endX,endY);
 		startX=endX;
 		startY=endY;
 	}
 }
 void mousePressed()
 {
-	startX=0;
-	endX=0;
-	startY=150;
-	endY=150;
+	startX=500;
+	startY=0;
+	endX=500;
+	endY=0;
 }
 
