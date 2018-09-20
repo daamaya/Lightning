@@ -7,14 +7,14 @@ void setup()
 {
   size(1000,1000);
   background(0);
-  strokeWeight(5);
+  strokeWeight(2);
 }
 void draw()
 {
 	//stroke(185,76,225);
 	while(endY<1000)
 	{
-		stroke((int)(Math.random*255),(int)(Math.random*255),(int)(Math.random*255));
+		stroke((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
 		endX=startX + (int)(Math.random()*19)-9;
 		endY=startY + (int)(Math.random()*10);
 		line(startX,startY,endX,endY);
